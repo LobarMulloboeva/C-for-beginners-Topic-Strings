@@ -19,3 +19,6 @@ int main(void)
     }
 
 }
+
+/* What is the purpose of a strcmp() function in C?
+This function compares two strings and returns 0 if both match. Note: it is case-sensitive.*/
