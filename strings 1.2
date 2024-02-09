@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    char response[64];
+    char size, c;
+
+    printf("Say any word: ");
+    gets(response);
+
+    puts("Here is how we say it backwards");
+    size = strlen(response);
+
+    for(c = size-1; c >= 0; c--)
+    {
+        printf("%c", response[c]);
+    }
+}
