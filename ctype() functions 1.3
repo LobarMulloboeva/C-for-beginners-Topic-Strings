@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main(void)
+{   
+    int x = 0;
+    char answer[5];
+    char convert;
+    char question[] = "Would you like me to send your password to the bad guys?\n";
+    char command[] = "Type 'Y' or 'N'\n";
+    printf(question);
+    printf(command);
+    gets(answer);
+
+    do
+    {   if(answer[x] != 'y' && answer[x] != 'n')
+        {
+            puts("You must enter 'Y' or 'N'");
+            printf(command);
+            fgets(answer, sizeof(answer), stdin);
+            x = 0;
+        }
+        else
+        {
+            x++;
+        }
+        
+    } while (answer[x] != 'y' && answer[x] != 'n');
+    
+
+    while(answer[x])
+    {  
+        convert = tolower(answer[x]);
+        if(convert == 'y')
+        {
+            printf("Well, then: your password is safe.");
+        }
+        else if(convert == 'n')
+        {
+            printf("Sending your password...");
+        }
+        x++;
+    }
+    return 0;
+}
