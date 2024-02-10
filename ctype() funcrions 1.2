@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main(void)
+{
+    int x =0;
+    char c;
+    char input[] = "Please do not shout!\n";
+
+    while(input[x])
+    {
+        c = toupper(input[x]);
+        putchar(c);
+        x++;
+    }
+    printf(input); 
+    return 0;
+}
