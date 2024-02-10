@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main(void)
+{
+    char input[200];
+    int x, digits;
+    x = digits = 0;
+
+    printf("Please enter your address: ");
+    gets(input);
+
+    while(input[x])
+    {
+        if(isdigit(input[x]))
+        {
+            digits++;
+        }
+        x++;
+    }
+    printf("There are %i digits in your address", digits);
+
+}
