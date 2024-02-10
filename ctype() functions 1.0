@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main(void)
+{
+    char input[128];
+    printf("Please write your text: ");
+    gets(input);
+
+    int x, letters, spaces;
+    x = letters = spaces = 0;
+
+    while(input[x])
+    {
+        if(isalpha(input[x]))
+        {
+            letters++;
+        }
+        else if(isspace(input[x]))
+        {
+            spaces++;
+        }
+        x++;
+    }
+    printf("The text has %i letters and %i spaces\n", letters, spaces);
+    return 0;
+}
